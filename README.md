@@ -41,6 +41,18 @@ Gets the advertising id (IDFA) info (id and limit ad tracking flag).
 * {function()} success:    success callback with {idfa: <advertising id (IDFA)>, limitAd: <boolean>} as object argument.
 * {function()} failure:    failure callback.
 
+*Example:* 
+```javascript
+window.androidIDFA.getAdInfo(function(localAdInfo) {
+    console.log('localAdInfo success:');
+    console.log(JSON.stringify(localAdInfo));
+  },
+  function() {
+    console.log('getAdInfo fail!');				
+  }					
+);
+```
+
 ### Advertising id ###
 #### getAdId(success, error);
 Gets the advertising id (IDFA).
